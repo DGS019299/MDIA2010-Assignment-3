@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8" http-equiv="refresh" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Landing</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="java.js"></script>
+
+</head>
+
+<body> 
+    <!-- Background looping audio -->
+    <audio id="background-audio" src="audio/neuralsync_society.mp3" loop></audio>
+    <script>
+    // Play audio only after user interaction (page load from index)
+    document.addEventListener('DOMContentLoaded', function() {
+        // Try to play if coming from index.html and user has interacted
+        function playAudioOnUserGesture() {
+            var audio = document.getElementById('background-audio');
+            if (audio && audio.paused) {
+                audio.play().catch(function(){});
+            }
+            document.removeEventListener('click', playAudioOnUserGesture);
+        }
+        document.addEventListener('click', playAudioOnUserGesture);
+    });
+    </script>
+    
+<!--CCTV Footage Screens-->
+            <div class="TV-grid">
+                    <!-- Rows -->
+                    <!-- 1 -->
+
+                    <div class="tv-row">
+                        <div class="TV-screen"
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Anthony Hopkins, 31</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> LIVE VIEW: Sitting at desk, prolonged screen focus<br><video width='300' controls><source src='Videos/1.mp4' type='video/mp4'></video><br><br> </span><a href='Neuralsync DashboardAnthony.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">Anthony Hopkins</div>
+                        <img src="images/1.jpg" ></div>
+
+                        <div class="TV-screen" 
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Claire Taylor, 22</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> LIVE VIEW: Walking in Sydney City<br><video width='300' controls><source src='Videos/2.mp4' type='video/mp4'></video><br><br> </span><a href='Neuralsync DashboardClaire.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">Claire Taylor</div>
+                        <img src="images/2.png" ></div>
+
+                        <div class="TV-screen"
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>James Bottle, 16</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> LIVE VIEW: Walking in Kensington<br><video width='300' controls><source src='Videos/3.mp4' type='video/mp4'></video><br><br> </span><a href='Neuralsync DashboardJames.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">James Bottle</div>
+                        <img src="images/3.png" ></div> 
+                    
+                        <div class="TV-screen"
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Anna Hartridge, 55</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> LIVE VIEW: Doom scrolling, PI score decreased<br><video width='300' controls><source src='Videos/4.mp4' type='video/mp4'></video><br><br> </span><a href='Neuralsync DashboardAnna.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">Anna Hartridge</div>
+                        <img src="images/4.png" ></div> 
+                        
+                        <div class="TV-screen"
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Bill Baast, 43</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> LIVE VIEW: At Lancart Oval, PI score increased<br><video width='300' controls><source src='Videos/5.mp4' type='video/mp4'></video><br><br> </span><a href='Neuralsync DashboardBill.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">Bill Baast</div>
+                        <img src="images/5.png" ></div>
+
+                    </div>
+                     <!-- 2 -->               
+                     <div class="tv-row">
+                        <div class="TV-screen" 
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Taylor Johnson, 35</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> CONNECTION LOST: In rideshare vehicle, prolonged screen focus<br><img src='images/6.jpg' style='width:400px; height:500px;'><br><br> </span><a href='Neuralsync DashboardTaylor.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">Taylor Johnson</div>
+                        <img src="images/6.jpg" ></div>
+                        
+                        <div class="TV-screen"
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Thomas Gent, 19</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> CONNECTION LOST: Outside socialising, PI score increased <br><img src='images/7.jpg' style='width:400px; height:500px;'><br><br> </span><a href='Neuralsync DashboardThomas.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">Thomas Gent</div>
+                        <img src="images/7.jpg" ></div>
+                        
+                        <div class="TV-screen"
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Sarah Gent, 23</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> FEED UNAVAILABLE: Outside watching sunset, PI score increased<br><img src='images/8.jpg' style='width:400px; height:500px;'><br><br> </span><a href='Neuralsync DashboardSarah.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">Sarah Gent</div>
+                        <img src="images/8.jpg" ></div> 
+
+                        <div class="TV-screen"
+                         data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Callum Narc, 26</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> FEED UNAVAILABLE: Socialising outside, ocassional scrolling<br><img src='images/9.jpg' style='width:400px; height:500px;'><br><br> </span><a href='Neuralsync DashboardCallum.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                         <div class="tv-label">Callum Narc</div>
+                         <img src="images/9.jpg" ></div> 
+                         
+                        <div class="TV-screen"
+                        data-html="<div class='font'><span style='font-size:25px; color:white; border:2px solid #86c5f9; border-radius:8px; padding:4px 12px'>Emma Clarke, 14</span><br><br><span style='font-size:24px; color:white; font-weight: bold'> FEED UNAVAILABLE: Travelling in vehicle, passive scrolling<br><img src='images/10.jpg' style='width:400px; height:500px;'><br><br> </span><a href='Neuralsync DashboardEmma.html' style='display:inline-block; margin-top:10px; padding:8px 16px; background:#86c5f9; color:#222; border-radius:8px; text-decoration:none; font-size:24px; color:white; font-weight:bold'>Go to NeuralSync Dashboard</a></div>">
+                        <div class="tv-label">Emma Clarke</div>
+                        <img src="images/10.jpg" ></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--End of CCTV Footage Screens-->
+
+
+            <!--TV screen modal HTML-->
+            <div class="zoom-screen-bg" id="zoomModal" style="display:none;">
+                <div class="zoom-screen" style="overflow:hidden;">
+                    <span class="close-button" id="closeModal">&times;</span>
+                    <br>
+                    <h1>NeuralSync Monitor</h1>
+                    <p id="modalText"></p>
+
+                </div>
+            </div>
+            
+            
+
+
+
+
+
+           
+
+
+
+
+
+        
+        <a href="index.html"><div class="phone-home-button"></div></a>
+    </div>
+</div>
+</body>
+</html>

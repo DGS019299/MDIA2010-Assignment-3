@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div class="container"  style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding-top: 80px; min-height:90vh; gap:48px;">
+    <div id="typedText" class="font" style="font-size: 24px; color: chartreuse; text-align:center; max-width:1500px;"></div>
+    
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <div class="container">
+      <div class="progress-bar" id="progressBar"></div>
+      <br>
+      <a id="enterDashboardBtn" href="dashboard.html" style="display:none; padding:16px 32px; background:#36c41a; color:#222; border-radius:8px; text-decoration:none; font-size:30px; color:white; font-weight:bold; text-align: center;">Enter Dashboard</a>
+    </div>
+    </div>
+
+<!--AI was used to help with the creation of this javascript-->
+    <script>
+const text = "Welcome Agent J. Bumstead. On behalf of the Australian Government, we welcome you to the NeuralSync Monitoring Dashboard. As a licensed Presence Analyst, your tasks today include: Monitoring and recording each assigned users' screen engagement, Assessing emotional and cognitive intent through EEG, heart rate, and LiDAR feedback, Logging Presence Index (PI) Scores for systematic review.           (All users of NeuralSync Technologies® consent to being monitored by our Government team in order to better improve social presence and digital detox)  Please proceed with caution and follow all protocols. Let's rebuild meaningful presence - one mind at a time.";
+const target = document.getElementById("typedText");
+let i = 0;
+function typeWriter() {
+  if (i < text.length) {
+    target.textContent += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 70); // Adjust speed here
+  }
+}
+typeWriter();
+
+// Show button after progress bar animation completes
+const progressBar = document.getElementById("progressBar");
+const enterBtn = document.getElementById("enterDashboardBtn");
+progressBar.addEventListener("animationend", function() {
+  enterBtn.style.display = "inline-block";
+});
+</script>
+</body>
+</html>

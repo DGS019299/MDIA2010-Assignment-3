@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NeuralSync Audio Player</title>
+  <style>
+    body { margin:0; background:#111; color:#fff; display:flex; align-items:center; justify-content:center; height:100vh; }
+    audio { width:180px; }
+  </style>
+</head>
+<body>
+  <audio id="background-audio" src="audio/neuralsync_society.mp3" loop autoplay controls></audio>
+  <script>
+    // Try to play on load, fallback to user gesture
+    var audio = document.getElementById('background-audio');
+    function tryPlay() {
+      if (audio && audio.paused) {
+        audio.play().catch(function(){});
+      }
+    }
+    document.addEventListener('DOMContentLoaded', tryPlay);
+    document.addEventListener('pointerdown', tryPlay, true);
+    document.addEventListener('keydown', tryPlay, true);
+  </script>
+</body>
+</html>
